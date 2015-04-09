@@ -1,0 +1,5 @@
+/* hide hierarchy UI for groups taxonomy, this prevents the creation of children for a taxonomy */
+body.post-type-mdresourcelib .term-parent-wrap,
+body.post-type-mdresourcelib #newgroups_parent {
+	display:none;
+}
