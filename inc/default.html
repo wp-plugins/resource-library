@@ -1,0 +1,38 @@
+{% if terms or docs %}
+<div class="resrclib-container">
+	{% if terms %}
+		<ul class="resrclib-tabs">
+			{% for term in terms %}
+				<li class="resrclib-tab resrclib-tab-{{term.id}}" data-id="{{term.id}}"><a href="javascript:;">{{term.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<div class="resrclib-panels">
+			{% for term in terms %}
+				<a class="resrclib-panel-title resrclib-panel-title-{{term.id}}" data-id="{{term.id}}" href="javascript:;">{{term.name}}</a>
+				<div class="resrclib-panel resrclib-panel-{{term.id}}">
+					<ul class="resrclib-docs">
+						{% for doc in term.docs %}
+							<li class="resrclib-doc">
+								<div class="resrclib-info"><span class="resrclib-info-type">{{doc.type|upper}}</span> <a href="{{doc.location}}"><i class="icon-download-cloud"></i></a></div>
+								<p class="resrclib-doc-title"><a href="{{doc.location}}">{{doc.title}}</a></p>
+								{% if doc.caption %}<p class="resrclib-doc-caption">{{doc.caption}}</p>{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if docs %}
+		<ul class="resrclib-docs">
+			{% for doc in docs %}
+				<li class="resrclib-doc">
+					<div class="resrclib-info"><span class="resrclib-info-type">{{doc.type|upper}}</span> <a href="{{doc.location}}"><i class="icon-download-cloud"></i></a></div>
+					<p class="resrclib-doc-title"><a href="{{doc.location}}">{{doc.title}}</a></p>
+					{% if doc.caption %}<p class="resrclib-doc-caption">{{doc.caption}}</p>{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,100 @@
+.resrclib-panels {
+	border:1px solid #ccc;
+	border-top:0;
+	padding:10px 20px;
+}
+.resrclib-panel,
+.resrclib-panel-title {
+	display:none;
+}
+.resrclib-docs {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.resrclib-doc {
+	border-top:1px solid #eee;
+	padding:10px 0;
+	position:relative;
+}
+.resrclib-doc:first-child {
+	border-top:0;
+}
+.resrclib-doc p {
+	margin:0;
+}
+.resrclib-doc-title {
+	font-size:1.1em;
+	padding-right:70px;
+}
+.resrclib-info {
+	position:absolute;
+	right:0;
+	font-size:.8em;
+}
+.resrclib-info span {
+	padding:2px 4px;
+}
+.resrclib-info a {
+	text-decoration:none;
+}
+.resrclib-info-type {
+	color:#999;
+}
+.resrclib-tabs {
+	border-bottom:1px solid #ccc;
+	height:38px;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.resrclib-tab {
+	background-color:#eee;
+	border:1px solid transparent;
+	border-bottom:1px solid #ccc;
+	border-radius:3px 3px 0 0;
+	float:left;
+	height:37px;
+	line-height:37px;
+	margin:0;
+	margin-left:3px;
+	padding:0 12px;
+}
+.resrclib-tab:first-child {
+	margin-left:0;
+}
+.resrclib-tab.active {
+	background-color:#fff;
+	border:1px solid #ccc;
+	border-bottom:0;
+	height:38px;
+}
+.resrclib-tab a:focus {
+	outline:none;
+}
+.resrclib-tabs.resrclib-smaller .resrclib-tab {
+	font-size:.8em;
+}
+.resrclib-list .resrclib-tabs {
+	display:none;
+}
+.resrclib-list .resrclib-panels {
+	padding-bottom:0;
+	padding-top:0;
+}
+.resrclib-list .resrclib-panel-title {
+	border-bottom:0;
+	border-top:1px solid #ccc;
+	display:block;
+	font-size:1.2em;
+	margin:0 -20px;
+	outline:none;
+	padding:5px 20px;
+	text-decoration:none;
+}
+.resrclib-list .resrclib-panel-title.active {
+	color:#000;
+}
+.resrclib-list .resrclib-doc:first-child {
+	border-top:1px solid #eee;
+}
