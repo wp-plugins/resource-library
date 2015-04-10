@@ -13,6 +13,12 @@ class ResourcePluginController extends PluginController
 		add_action( 'init', array( $this, 'create_post_type' ) );
 		add_action( 'init', array( $this, 'create_taxonomy' ) );
 		add_action( 'init', array( $this, 'create_default_terms' ) );
+		add_action( 'admin_menu', array ( $this, 'menu_position' ) );
+	}
+
+	public function menu_position()
+	{
+		\WPAlchemy\Settings\setMenuPosition( 'mdresourcelib', '99.0300' );
 	}
 
 	public function create_post_type()
@@ -95,8 +101,8 @@ class ResourcePluginController extends PluginController
 	public function admin_styles_and_scripts()
 	{
 		wp_enqueue_media();
-		wp_enqueue_style( 'mdresourcelib-admin', plugins_url( 'inc/admin.css', $this->plugin_file, array(), '0.1.0' ) );
-		wp_enqueue_script( 'mdresourcelib-admin', plugins_url( 'inc/admin.js', $this->plugin_file ), array( 'jquery' ), '0.1.0', true );
+		wp_enqueue_style( 'mdresourcelib-admin', plugins_url( 'inc/admin.css', $this->plugin_file, array(), '0.1.1' ) );
+		wp_enqueue_script( 'mdresourcelib-admin', plugins_url( 'inc/admin.js', $this->plugin_file ), array( 'jquery' ), '0.1.1', true );
 	}
 
 	public function init_shortcodes()
@@ -178,12 +184,12 @@ class ResourcePluginController extends PluginController
 
 	public function front_styles_and_scripts()
 	{
-		wp_enqueue_style( 'mdresourcelib-fontello', plugins_url( 'inc/fontello/css/fontello.css', $this->plugin_file ), array(), '0.1.0' );
-		wp_enqueue_style( 'mdresourcelib-fontello-ie7', plugins_url( 'inc/fontello/css/fontello-ie7.css', $this->plugin_file ), array(), '0.1.0' );
-		wp_enqueue_style( 'mdresourcelib-front', plugins_url( 'inc/front.css', $this->plugin_file ), array( 'mdresourcelib-fontello' ), '0.1.0' );
+		wp_enqueue_style( 'mdresourcelib-fontello', plugins_url( 'inc/fontello/css/fontello.css', $this->plugin_file ), array(), '0.1.1' );
+		wp_enqueue_style( 'mdresourcelib-fontello-ie7', plugins_url( 'inc/fontello/css/fontello-ie7.css', $this->plugin_file ), array(), '0.1.1' );
+		wp_enqueue_style( 'mdresourcelib-front', plugins_url( 'inc/front.css', $this->plugin_file ), array( 'mdresourcelib-fontello' ), '0.1.1' );
 		global $wp_styles;
 		$wp_styles->add_data( 'mdresourcelib-fontello-ie7', 'conditional', 'IE 7' );
-		wp_enqueue_script( 'mdresourcelib-front', plugins_url( 'inc/front.js', $this->plugin_file ), array( 'jquery' ), '0.1.0', true );
+		wp_enqueue_script( 'mdresourcelib-front', plugins_url( 'inc/front.js', $this->plugin_file ), array( 'jquery' ), '0.1.1', true );
 	}
 
 	public function init_default_pages( \WPAlchemy\Factory $factory )

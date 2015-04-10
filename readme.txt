@@ -3,7 +3,7 @@ Contributors: mightydigital, farinspace
 Tags: files, documents, resources, corporate, business
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ If you've downloaded the latest plugin files:
 2. Activate the plugin from the Plugins section
 
 == Changelog ==
+
+= 0.1.1 =
+* changed plugin menu position
 
 = 0.1.0 =
 * initial release
