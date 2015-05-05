@@ -6,7 +6,7 @@ Plugin URI: http://mightydev.com/resource-library/
 Description: Document management at its finest. Easily create and manage a document download and viewing area for your website.
 Author: Mighty Digital
 Author URI: http://mightydigital.com
-Version: 0.1.1
+Version: 0.1.2
 */
 
 if ( ! defined( 'WPINC' ) ) {

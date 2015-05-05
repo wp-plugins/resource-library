@@ -2,8 +2,8 @@
 Contributors: mightydigital, farinspace
 Tags: files, documents, resources, corporate, business
 Requires at least: 4.0
-Tested up to: 4.1.1
-Stable tag: 0.1.1
+Tested up to: 4.2.1
+Stable tag: 0.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ If you've downloaded the latest plugin files:
 2. Activate the plugin from the Plugins section
 
 == Changelog ==
+
+= 0.1.2 =
+* fixed php fatal error, namespace issue caused undefined function setMenuPosition error
 
 = 0.1.1 =
 * changed plugin menu position

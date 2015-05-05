@@ -9,3 +9,5 @@ $loader->addPrefix( 'WPAlchemy\\Settings', __DIR__ . '/WPAlchemy' );
 $loader->addPrefix( 'MightyDev\\WordPress\\', __DIR__ . '/MightyDev' );
 $loader->addPrefix( 'MightyDev\\WordPress\\Plugin\\', __DIR__ . '/MightyDev' );
 $loader->register();
+
+require_once( __DIR__ . '/MightyDev/helpers.php' );
